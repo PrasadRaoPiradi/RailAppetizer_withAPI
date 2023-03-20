@@ -63,7 +63,7 @@ export default function Basket(props){
             <div className="row">
               <button onClick={() => 
               {
-                let p = "{ \"id\": 1, \"name\": \"Item list\", \"price\": 1200 , \"status\":\"Ordered\"}"
+                let p = "{ \"id\": 1, \"name\": \"Nandini Restaurant\", \"price\": 1200 , \"status\":\"Ordered\"}"
                 let dataParserd = JSON.parse(p);
                 dataParserd.price = totalPrice;
                 //[{"id":1,"name":"Anand","ItemList":"detauls of order","status":"preparing","price":"1200/-"}]
@@ -71,7 +71,7 @@ export default function Basket(props){
                   method: 'POST',
                   headers: { 'Content-Type': 'application/json' },
                   //body: JSON.stringify({"id":1,"emailID":"shaan0987@gmail.com","iscustomer":false,"Name":"Nadia","password":"shahnawaz","GST":"123123","MobileNumber":"9876543210","Location":"Bangalore"})
-                  body: JSON.stringify({"id":1,"name":"R1","ItemList":"detauls of order","status":"ordered","price":totalPrice})
+                  body: JSON.stringify({"id":1,"name":"Nandini Restaurant","ItemList":"detauls of order","status":"ordered","price":totalPrice})
               };
               console.log(requestOptions.body)
                 fetch("http://127.0.0.1:8000/api/CreateOrder/", requestOptions)

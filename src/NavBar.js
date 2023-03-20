@@ -7,7 +7,10 @@ export default function Navbar() {
         Home
       </Link>
       <ul>
-        <CustomLink to="/login">Login</CustomLink>
+      {sessionStorage.getItem("CredentialsCustomer") === "true" &&      <CustomLink to="/login">LogOff</CustomLink> }
+
+      {sessionStorage.getItem("CredentialsCustomer") === null &&      <CustomLink to="/login">Login</CustomLink> }
+
         <CustomLink to="/Signup">Signup</CustomLink>
         {/* <CustomLink to="/Payment">Payment</CustomLink>
         <CustomLink to="/RestaurantHome">Restaurants</CustomLink>

@@ -19,7 +19,7 @@ function RestaurantHome() {
         <div className="form-check form-check-inline">
           <label>Go Live </label>
           <label className="switch">
-            <input type="checkbox" />
+            <input type="checkbox" checked = "true" />
             <span className="slider round"></span>
           </label>
         </div>
@@ -46,7 +46,9 @@ function RestaurantHome() {
           </div>
         </div>
         <div className="form-check form-check-inline">
-          <button className="btn btn-primary btn-sm" target="_blank">Update/Add Menu</button>
+          <button className="btn btn-primary btn-sm" onClick={(e) => {
+            e.preventDefault()
+            alert("This Page is unders maintenance")}} target="_blank"> Update/Add Menu</button>
         </div>
       </nav>
       <div className="form-check form-check-inline">
